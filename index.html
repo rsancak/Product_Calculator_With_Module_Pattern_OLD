@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product_Calculator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-success">
+        <div class="container justify-content-md-center">
+            <a href="javascript:;" class="navbar-brand col-6">
+                <i class="fa-solid fa-calculator"></i> Product Calculator
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6 col-sm-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="form-group mb-0">
+                            <label for="exchangeDolar">Exchange Dolar Rate</label>
+                            <input type="number" value="5.0" class="form-control" id="exchangeDolar" placeholder="Exchange Dolar">
+                        </div>
+                    </div>
+                </div>                
+                <div class="card">
+                    <div class="card-body">
+                        <form id="addForm">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" id="productName" placeholder="Product Name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="number" class="form-control" id="productPrice" placeholder="Product Price ($)" required>
+                                </div>
+                            </div>
+        
+                            <button type="submit" class="btn btn-primary btn-sm addBtn">
+                                <i class="fas fa-plus"></i>
+                                Add Product
+                            </button>
+                            <button type="submit" class="btn btn-warning btn-sm updateBtn">
+                                <i class="far fa-edit"></i>
+                                Save Changes
+                            </button>
+                            <button type="submit" class="btn btn-danger btn-sm deleteBtn">
+                                <i class="fas fa-times"></i>
+                                Delete Product
+                            </button>
+                            <button type="submit" class="btn btn-secondary btn-sm cancelBtn">
+                                <i class="fas fa-arrow-circle-left"></i>
+                                Cancel
+                            </button>
+                        </form>
+                    </div>
+                </div>
+        
+                <div id="productCard" class="card mt-3">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th></th>
+                        </thead>
+                        <tbody id="item-list">
+                        </tbody>
+                    </table>
+                </div>
+        
+                <div class="card mt-3">
+                    <div class="card-footer">
+                        <table class="table mb-0 table-striped">
+                            <tr>
+                                <td>
+                                    <strong>Total ($)</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span id="total-dolar"></span> $
+                                </td>
+                            </tr>      
+                            <tr>
+                                <td >
+                                    <strong>Total (TL)</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span id="total-tl"></span> TL
+                                </td>
+                            </tr>                        
+                        </table>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
